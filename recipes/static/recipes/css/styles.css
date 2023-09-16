@@ -1,0 +1,19 @@
+.recipe_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 17px;
+  padding: 23px 23px 23px 23px;
+  margin: 2px;
+  margin-top: 30px;
+}
+
+.grid_item {
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+}
