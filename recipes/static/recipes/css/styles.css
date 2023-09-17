@@ -6,36 +6,13 @@
   padding: 0;
 }
 
-.nav-bar {
-  width: 80vw;
-  height: 10vh;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.back-home_btn {
-  width: 50px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 16px;
-  background-color: rgb(132, 97, 11);
-  border-radius: 5px;
-  border: 0px;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  text-align: center;
-}
-
 .recipe_grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 17px;
   padding: 23px 23px 23px 23px;
-  margin: 2px;
+  width: 50vh;
+  margin: 0, auto;
   margin-top: 30px;
 }
 
@@ -44,7 +21,6 @@
   background-color: #ffffff;
   color: #000000;
   border-radius: 20px;
-  position: relative;
   margin-top: 8px;
   margin-bottom: 8px;
   font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
