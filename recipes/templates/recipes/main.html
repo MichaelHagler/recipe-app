@@ -5,34 +5,13 @@
 <head>
   <title>RecipeApp | Recipes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="{% static 'recipes/images/favicon.ico' %}">
-  <!-- CSS CUSTOM -->
   <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
 </head>
 
 <body>
   <div class="nav-bar">
-    <div class="search_box" style="margin-top: 15px;">
-      <form action="" method="GET" class="form">
-        {% csrf_token %}
-        <input type="text" name="recipe_search" class="form_search_input" id="searchbar" placeholder="Search Recipes..."
-          onkeyup="search_recipe()" />
-      </form>
-      <br>
-      <div class="search_results" autocomplete="off" style="display: none;">
-        {% for object in object_list %}
-        <p class="recipe_searched">
-          <a class="recipe_name"
-            style="font-size: 18px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"
-            href="{{object.get_absolute_url}}"> {{object.name}} </a>
-        </p>
-        {% endfor %}
-      </div>
-    </div>
     <div>
       <a class="back-home_btn" href="/home" style="margin: 20px;"> Home </a>
-      <a href="{%url 'recipes:records' %}" class="logout_btn" style="margin: 20px;">Search</a>
-      <a href="{%url 'logout' %}" class="logout_btn" style="margin: 20px;">Logout</a>
     </div>
   </div>
 
@@ -51,8 +30,6 @@
     </div>
     {% endfor %}
   </div>
-  <!-- linking javascript -->
-  <script src="{% static 'recipes/js/js.js' %}"></script>
 </body>
 
 </html>
