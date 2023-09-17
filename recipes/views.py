@@ -5,7 +5,7 @@ from .models import Recipe
 
 class RecipeListView(ListView):
   model = Recipe 
-  template_name = 'recipes/recipes_home.html'
+  template_name = 'recipes/main.html'
 
 class RecipeDetailView(DetailView):
   model = Recipe 
