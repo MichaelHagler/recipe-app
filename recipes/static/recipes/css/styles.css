@@ -8,7 +8,7 @@
 
 .recipe_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 5fr;
   grid-gap: 17px;
   padding: 23px 23px 23px 23px;
   width: 50vh;
@@ -23,7 +23,7 @@
   border-radius: 20px;
   margin-top: 8px;
   margin-bottom: 8px;
-  font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-family: 'Frank Ruhl Libre' ,Georgia, serif;
 }
 
 .food_images {
@@ -45,14 +45,14 @@
 }
 
 .details_modal {
-  width: 55%;
+  max-width: 500px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 25px;
-  box-shadow: 5px 10px 15px;
+  box-shadow: 5px 10px 10px;
   margin: 0 auto;
   margin-top: 10vh;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Frank Ruhl Libre' ,Georgia, serif;
 }
 
 .details_body {
