@@ -17,7 +17,7 @@ def get_graph():
   buffer.close()
   return graph
 
-def get_chart(char_type, data, **kwargs):
+def get_chart(chart_type, data, **kwargs):
   plt.switch_backend('AGG')
   fig = plt.figure(figsize = (6,3))
 

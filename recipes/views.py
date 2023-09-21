@@ -36,6 +36,7 @@ def records(request):
 
     qs = Recipe.objects.all()
     id_searched = []
+    
     for obj in qs:
       diff = obj.calculate_difficulty()
       if diff == recipe_diff:

@@ -13,7 +13,7 @@
 {% if recipe_df %}
   {{recipe_df|safe}}
   <br>
-  <img src="data:image/png;vase64, {{chart|safe}}">
+  <img src="data:image/png;base64, {{chart|safe}}">
 {% else %}
   <h3>no data</h3>
 {% endif %}
