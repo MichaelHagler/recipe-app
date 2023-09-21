@@ -1,19 +1,33 @@
-<h1> Search for sales records </h1>
-<a href="{%url 'logout' %}"> Logout </a>
+{% load static %}
+<head>
+  <title>RecipeApp | Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
+</head>
 
-<hr> 
-<form action="" method="POST">
-  {% csrf_token %}
-  {{form}}
-  <button type="submit">search</button>
-</form>
+<body>
+  <div class="nav-bar">
+    <a class="home_btn" href="/home"> Home </a>
+    <a class="home_btn" href="/list" style="margin: 20px;"> Back </a>
+    <a href="{%url 'logout' %}" class="logout_btn">Logout</a>
+  </div>
 
-<br>
+  <h1> Search for sales records </h1>
 
-{% if recipe_df %}
-  {{recipe_df|safe}}
+  <hr> 
+  <form action="" method="POST" class="form_data">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">search</button>
+  </form>
+
   <br>
-  <img src="data:image/png;base64, {{chart|safe}}">
-{% else %}
-  <h3>no data</h3>
-{% endif %}
+
+  {% if recipe_df %}
+    {{recipe_df|safe}}
+    <br>
+    <img src="data:image/png;base64, {{chart|safe}}">
+  {% else %}
+    <h3>no data</h3>
+  {% endif %}
+</body>
