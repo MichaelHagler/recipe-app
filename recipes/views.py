@@ -19,6 +19,9 @@ class RecipeDetailView(LoginRequiredMixin, DetailView):
 def home(request):
   return render(request, 'recipes/recipes_home.html')
 
+def about_view(request):
+  return render(request, 'recipes/about.html')
+
 def create_view(request):
   create_form = CreateRecipeForm(request.POST or None, request.FILES)
   name = None

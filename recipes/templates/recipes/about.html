@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RecipeApp | About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href="{% static 'recipes/css/styles.css' %}">
+  <style>
+    p {
+      text-align: center; max-width: 400px; margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body style="background-color: rgb(197, 193, 193);">
+  <div class="nav-bar">
+    <a class="home_btn" href="/list"> Home </a>
+    <a class="home_btn" href="/recipes/create" style="margin: 20px;">Create</a>
+    <a class="search_btn" href="/recipes/search"> Search </a>
+    <a href="{%url 'logout' %}" class="logout_btn" style="margin: 20px;">Logout</a>
+  </div>
+
+  <h1 style="text-align: center;">About Me</h1>
+  <p>
+    Hi, I'm Michael. It took me too long to realize that my passion 
+    for building and troubleshooting PCs was the open door into web 
+    development. I'm always learning new skills and finding ways to 
+    use my creativity. Creating something from nothing in a digital 
+    space is the best place I can exercise my talents.
+  </p>
+
+  <br>
+
+  <p>
+    Check out my portfolio 
+    <br>
+    <br>
+    <a 
+      class="home_btn"
+      href="https://michaelhagler.github.io/portfolio-website/index.html">
+      here
+    </a>
+  </p>
+
+</body>
+
+</html>
