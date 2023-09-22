@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RecipeApp | Create</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href="{% static 'recipes/css/styles.css' %}">
+</head>
+
+<body>
+  <div class="nav-bar">
+    <a class="home_btn" href="/list"> Home </a>
+    <a class="search_btn" href="/recipes/search" style="margin: 20px;"> Search </a>
+    <a href="{%url 'logout' %}" class="logout_btn">Logout</a>
+  </div>
+
+  <h1>Create Recipe</h1>
+  <form action="" method="POST" class="form_data" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{create_form.as_p}}
+    <button type="submit" class="home_btn">Create</button>
+  </form>
+
+</body>
+
+</html>

@@ -3,7 +3,7 @@ from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from .models import Recipe
-from .forms import RecipesSearchForm
+from .forms import RecipesSearchForm, CreateRecipeForm
 import pandas as pd 
 from .utils import get_chart
 
@@ -18,6 +18,41 @@ class RecipeDetailView(LoginRequiredMixin, DetailView):
 
 def home(request):
   return render(request, 'recipes/recipes_home.html')
+
+def create_view(request):
+  create_form = CreateRecipeForm(request.POST or None, request.FILES)
+  name = None
+  cooking_time = None
+  genre = None
+  ingredients = None
+  rating = None
+  # pic = None
+
+  if request.method == 'POST':
+
+    try:
+      recipe = Recipe.objects.create(
+        name = request.POST.get('name'),
+        cooking_time = request.POST.get('cooking_time'),
+        ingredients = request.POST.get('ingredients'),
+      )
+
+      recipe.save()
+
+    except:
+      print('Oops...something went wrong')
+
+  context = {
+    'create_form': create_form,
+    'name': name,
+    'cooking_time': cooking_time,
+    'genre': genre,
+    'ingredients': ingredients,
+    'rating': rating,
+    # 'pic': pic
+  }
+
+  return render(request, 'recipes/create.html', context)
 
 @login_required
 def records(request):
