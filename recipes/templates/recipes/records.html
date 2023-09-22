@@ -5,17 +5,17 @@
   <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
 </head>
 
-<body>
+<body style="background-color: rgb(197, 193, 193);">
   <div class="nav-bar">
     <a class="home_btn" href="/home"> Home </a>
     <a class="home_btn" href="/list" style="margin: 20px;"> Back </a>
     <a href="{%url 'logout' %}" class="logout_btn">Logout</a>
   </div>
 
-  <h1> Search for sales records </h1>
+  <h1 style="text-align: center;"> Search for sales records </h1>
 
   <hr> 
-  <form action="" method="POST" class="form_data">
+  <form action="" method="POST" class="form_data" style="text-align: center;">
     {% csrf_token %}
     {{form}}
     <button type="submit">search</button>

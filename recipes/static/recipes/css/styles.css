@@ -4,6 +4,7 @@
   align-items: center;
   width: 100%;
   padding: 0;
+  background-color: rgb(197, 193, 193);
 }
 
 h1 {
@@ -12,7 +13,7 @@ h1 {
 
 .recipe_grid {
   display: grid;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: auto auto auto auto;
   grid-gap: 17px;
   padding: 23px 23px 23px 23px;
   width: 50vh;
